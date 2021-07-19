@@ -1,0 +1,56 @@
+/*CREATE TABLE patient
+(
+  P_ID     VARCHAR(20),
+  P_NAME   VARCHAR(15),
+  P_AGE    VARCHAR(2),
+  P_BLOODG VARCHAR(3),
+  AREA     VARCHAR(20),
+  PRIMARY KEY (P_ID)
+);*/
+
+
+/*CREATE TABLE donor
+(
+  D_ID         VARCHAR(20),
+  D_NAME       VARCHAR(15),
+  D_AGE        VARCHAR(2),
+  D_BLOODG     VARCHAR(3),
+  BB_ID        VARCHAR(4),
+  CONTACT      VARCHAR(11),
+  AREA         VARCHAR(20),
+  L_DONATION   VARCHAR(10),
+  
+  PRIMARY KEY (D_ID),
+  FOREIGN KEY (BB_ID)
+  
+);*/
+
+/*CREATE TABLE blood_bank
+(
+  BB_ID       VARCHAR(4),
+  B_BANK_NAME VARCHAR(30),
+  AREA        VARCHAR(20),
+  BB_CONTACT  VARCHAR(11),
+  EMAIL_ADD   VARCHAR(40),
+  
+  PRIMARY KEY(BB_CONTACT,EMAIL_ADD,BB_ID)
+  
+);*/
+
+/* CREATE TABLE blood_storage
+(
+  BB_ID                   VARCHAR(4),
+  P_BLOODG                VARCHAR(3),
+  BLOOD_GROUP             VARCHAR(3) ,
+  AVAILABILITY_OF_BLOOD   varchar(3)
+);*/
+
+CREATE TABLE price
+(
+  BLOOD_GROUP  VARCHAR(3),
+  PRICE_BLOOD  VARCHAR(8);
+);
+
+ 
+
+

@@ -1,0 +1,87 @@
+1. for seeing full tale 
+select*
+from patient;
+
+2. for specific name 
+SELECT *
+from patient
+where P_NAME ='MOON';
+
+3.last ay area achy H ase 
+SELECT P_NAME
+from patient
+where AREA LIKE '%H';
+
+4.SELECT P_NAME
+from patient
+where AREA LIKE '%H'
+ORDER BY P_NAME;
+
+5. serially name wise asbe 
+SELECT P_NAME
+from patient
+where AREA LIKE '%H'
+ORDER BY P_NAME;
+
+6.lowecase
+SELECT LOWER( P_NAME)
+from patient
+
+7.subSTR
+SELECT SUBSTR( P_NAME,2,3)
+from patient
+
+
+8. akta area ty koyjon kore achy 
+SELECT AREA,COUNT(P_NAME) People_lives
+from patient
+GROUP BY AREA;
+
+9.select PRICE_BLOOD,BLOOD_GROUP
+from price
+where PRICE_BLOOD<5000
+order by PRICE_BLOOD asc/desc;   
+
+
+10.3 ta column add korar jonne
+SELECT  p.P_NAME,b.BB_CONTACT,d.D_AGE
+FROM patient p,blood_bank b,donor d
+WHERE p.AREA=b.AREA AND b.BB_ID=d.BB_ID
+group by P_NAME;
+
+11. column er nam change 
+select PRICE_BLOOD /100 annal
+from price;
+
+12.aki table er 2 ta column add korarjnne 
+select (P_NAME || P_ID) totalname 
+from patient;
+
+13.using between 
+select PRICE_BLOOD,BLOOD_GROUP
+from price
+where PRICE_BLOOD between 1000 and 4000;
+
+14.max , minimum , avg 
+SELECT  MAX(PRICE_BLOOD), MIN(PRICE_BLOOD), AVG(PRICE_BLOOD) 
+FROM price
+order by PRICE_BLOOD asc;
+
+15. using replace 
+select P_NAME, replace (P_NAME,'M','E') new_p_name
+from patient;
+
+16.using SUM
+select sum (PRICE_BLOOD) totalSUM
+from price;
+
+17.SubQUERY
+select BLOOD_GROUP ,PRICE_BLOOD
+From price 
+WHERE PRICE_BLOOD IN (select PRICE_BLOOD
+					From price
+					where BLOOD_GROUP = 'A+')
+
+
+
+
